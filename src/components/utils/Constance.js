@@ -9,6 +9,11 @@ import travelDetail1 from '../../assets/travel_detail1.jpg';
 import travelDetail2 from '../../assets/travel_detail2.jpg';
 import travelDetail3 from '../../assets/travel_detail3.jpg';
 
+import ailingual from '../../assets/ailingual.png';
+import codingPal from '../../assets/appIcon.png';
+import alienRescue from '../../assets/alienRescue.png';
+import star from '../../assets/star.png';
+
 function CLConstance() {
 
     const routes = {
@@ -29,7 +34,7 @@ function CLConstance() {
 
             navItems: [
                 {title: 'Home', url: routes.home, iconName:'home'},
-                {title: 'Blogs', url: routes.blogs, iconName:'tags'},
+                // {title: 'Blogs', url: routes.blogs, iconName:'tags'},
                 {title: 'Portfolio', url: routes.portfolio, iconName:'briefcase'},
             ],
 
@@ -122,6 +127,13 @@ function CLConstance() {
                 }
             },
 
+            portfolios: [
+                {imgURL: ailingual, name: 'AILingual', description: '123'},
+                {imgURL: star, name: 'STAR', description: '456'},
+                {imgURL: alienRescue, name: 'Alien Rescue', description: '789'},
+                {imgURL: codingPal, name: 'Coding Pals', description: 'rrr'},
+            ],
+
             footer: {
                 title: 'Contact ME',
 
@@ -139,13 +151,16 @@ function CLConstance() {
                 homePage: 'CLHome',
                 charts:'CLCharts',
                 footer:'CLFooter',
+                portfolio: 'CLPortfolio',
             },
 
             classes: {
                 fullPage: 'CLFullPage',
+                hidden:'CLHidden',
+                overlay: 'CLOverlay',
                 centeredDiv: 'CLCenteredDiv',
                 pageContentDiv: 'CLPageContent',
-                hidden:'CLHidden',
+                portfolioCell: 'CLPortfolio-Cell',
                 footerIcon: 'CLFooterIcon',
             },
 

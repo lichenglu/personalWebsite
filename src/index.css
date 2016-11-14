@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: sans-serif; }
+  font-family: 'Inconsolata', monospace; }
 
 .CLFullPage {
   height: 100vh;
@@ -20,7 +20,6 @@ body {
 
 #CLHome .CLFullPage {
   position: relative;
-  font-family: 'Inconsolata', monospace;
   color: white; }
   #CLHome .CLFullPage p {
     font-size: 3.5vmin; }
@@ -41,10 +40,32 @@ body {
     padding-right: 10%;
     padding-bottom: 12px; }
 
+#CLPortfolio {
+  padding: 60px 0 20px 0;
+  min-height: 100vh;
+  color: white;
+  background-color: #a8d4d1; }
+  #CLPortfolio .col-md-12 {
+    padding: 0; }
+  #CLPortfolio .CLPortfolio-Cell {
+    height: 200px;
+    padding: 0;
+    background: #00a98b no-repeat center center;
+    box-shadow: inset 1px 1px 40px 0 rgba(0, 0, 0, 0.45);
+    border-radius: 5px; }
+    #CLPortfolio .CLPortfolio-Cell .CLOverlay {
+      background: rgba(0, 0, 0, 0.75);
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      -webkit-transition: opacity .25s ease;
+      -moz-transition: opacity .25s ease; }
+  #CLPortfolio .CLPortfolio-Cell:hover .CLOverlay {
+    opacity: 1; }
+
 #CLFooter {
   height: 142px;
   background-color: #29333d;
-  font-family: 'Inconsolata', monospace;
   color: white; }
   #CLFooter h3 {
     margin-top: 0;

@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: sans-serif;
+  font-family: 'Inconsolata', monospace;
 }
 
 @mixin vertical-horizontal-align($position: absolute, $verticalOffset: 50%) {
@@ -41,7 +41,6 @@ body {
   .CLFullPage {
 
     position: relative;
-    font-family: 'Inconsolata', monospace;
     color: white;
 
     p {
@@ -63,10 +62,43 @@ body {
 
 }
 
+#CLPortfolio {
+  padding: 60px 0 20px 0; // equal to the hight of navBar
+  min-height: 100vh;
+  color: white;
+  background-color: #a8d4d1;
+
+  .col-md-12 {
+    padding: 0;
+  }
+
+  .CLPortfolio-Cell {
+    height: 200px;
+    padding: 0;
+    background: #00a98b no-repeat center center;
+    box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+    border-radius:5px;
+
+    .CLOverlay {
+      background:rgba(0,0,0,.75);
+      width: 100%;
+      height: 100%;
+      opacity:0;
+      -webkit-transition: opacity .25s ease;
+      -moz-transition: opacity .25s ease;
+    }
+  }
+
+  .CLPortfolio-Cell:hover {
+    .CLOverlay {
+      opacity:1;
+    }
+  }
+}
+
 #CLFooter {
   height: 142px;
   background-color: #29333d;
-  font-family: 'Inconsolata', monospace;
   color: white;
 
   h3 {
