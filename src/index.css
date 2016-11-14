@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+.CLFullPage {
+  height: 100vh;
+  background: no-repeat center center; }
+
+.CLHidden {
+  display: none; }
+
+.CLCircular-Square {
+  border-radius: 50%; }
+
+#CLNavBar {
+  margin: 0;
+  border-radius: 0; }
+
+#CLHome .CLFullPage {
+  position: relative;
+  font-family: 'Inconsolata', monospace;
+  color: white; }
+  #CLHome .CLFullPage p {
+    font-size: 3.5vmin; }
+  #CLHome .CLFullPage .CLCenteredDiv {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateY(-50%);
+    transform: translateX(-50%); }
+  #CLHome .CLFullPage .CLPageContent {
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 15px; }
+
+#CLHome #CLCharts {
+  position: absolute;
+  bottom: 15%; }

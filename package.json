@@ -1,0 +1,29 @@
+{
+  "name": "my-site",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "node-sass": "^3.11.3",
+    "react-scripts": "0.7.0"
+  },
+  "dependencies": {
+    "chart.js": "^1.1.1",
+    "classname": "0.0.0",
+    "classnames": "^2.2.5",
+    "react": "^15.3.2",
+    "react-bootstrap": "^0.30.6",
+    "react-chartjs": "^0.8.0",
+    "react-dom": "^15.3.2",
+    "react-router": "^3.0.0",
+    "react-router-transition": "0.0.6",
+    "recharts": "^0.17.1"
+  },
+  "scripts": {
+    "start": "npm run watch-css & react-scripts start",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-css": "node-sass src/sass/base.scss src/index.css",
+    "watch-css": "node-sass src/sass/base.scss src/index.css -w"
+  }
+}
