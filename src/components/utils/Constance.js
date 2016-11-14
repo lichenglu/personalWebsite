@@ -121,6 +121,16 @@ function CLConstance() {
                     ]
                 }
             },
+
+            footer: {
+                title: 'Contact ME',
+
+                socialIcons: [
+                    {iconURL:"fa fa-github fa-4x", name:'Github', link:'https://github.com/lichenglu'},
+                    {iconURL:"fa fa-linkedin-square fa-4x", name:'LinkedIn', link:'https://www.linkedin.com/in/chenglu-li-445a2897'},
+                    {iconURL:"fa fa-envelope-o fa-4x", name:'Email', link:'li.chenglu@utexas.edu', isEmail: true},
+                ],
+            }
         },
 
         styles: {
@@ -128,6 +138,7 @@ function CLConstance() {
                 navBar: 'CLNavBar',
                 homePage: 'CLHome',
                 charts:'CLCharts',
+                footer:'CLFooter',
             },
 
             classes: {
@@ -135,6 +146,7 @@ function CLConstance() {
                 centeredDiv: 'CLCenteredDiv',
                 pageContentDiv: 'CLPageContent',
                 hidden:'CLHidden',
+                footerIcon: 'CLFooterIcon',
             },
 
             colors: {

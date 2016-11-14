@@ -6,7 +6,6 @@ import React, { Component } from 'react';
 import {Navbar, Nav, NavItem, Glyphicon} from 'react-bootstrap';
 import CLConstance from '../utils/Constance';
 
-
 class CLHeader extends Component {
 
     generateNavItems() {
@@ -17,6 +16,7 @@ class CLHeader extends Component {
                     eventKey={idx}
                     onClick={this.props.didClickNavItem.bind(this, item.url)}
                     key={idx}
+                    className={this.props.currentRoute === item.url ? 'active' : ''}
                 >
                     <Glyphicon glyph={item.iconName} />
 

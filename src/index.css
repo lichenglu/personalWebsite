@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: sans-serif; }
 
 .CLFullPage {
@@ -32,13 +33,33 @@ body {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateY(-50%);
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    width: 80%; }
   #CLHome .CLFullPage .CLPageContent {
     padding-top: 10%;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 15px; }
+    padding-bottom: 12px; }
 
-#CLHome #CLCharts {
-  position: absolute;
-  bottom: 15%; }
+#CLFooter {
+  height: 142px;
+  background-color: #29333d;
+  font-family: 'Inconsolata', monospace;
+  color: white; }
+  #CLFooter h3 {
+    margin-top: 0;
+    padding-top: 15px; }
+  #CLFooter .CLFooterIcon i {
+    cursor: pointer; }
+  #CLFooter .CLFooterIcon i:hover {
+    color: #aeafae; }
+
+@media all and (max-width: 770px) {
+  .CLFullPage {
+    height: 200vh; } }
+
+@media all and (max-width: 500px) {
+  .CLFullPage {
+    height: 140vh; }
+    .CLFullPage p {
+      font-size: 7.5vmin; } }

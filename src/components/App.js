@@ -4,11 +4,21 @@ import { withRouter } from 'react-router';
 import { RouteTransition } from 'react-router-transition';
 
 import CLHeader from './header/CLHeader';
+import CLFooter from './footer/CLFooter';
 
 class App extends Component {
 
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            currentRoute: '',
+        }
+    }
+
     didClickNavItem(url) {
         this.props.router.push(url);
+        this.setState({currentRoute: url});
     }
 
     render() {
@@ -16,7 +26,10 @@ class App extends Component {
         return (
             <div className="App">
 
-                <CLHeader didClickNavItem={this.didClickNavItem.bind(this)} />
+                <CLHeader
+                    didClickNavItem={ this.didClickNavItem.bind(this) }
+                    currentRoute={ this.state.currentRoute }
+                />
 
                 <div>
                     <RouteTransition
@@ -28,6 +41,8 @@ class App extends Component {
                         {this.props.children}
                     </RouteTransition>
                 </div>
+
+                <CLFooter />
 
             </div>
         );

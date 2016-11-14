@@ -12,11 +12,11 @@ export default (props) => {
     const imgStyle = {
         width: "70%",
         height: "auto"
-    }
+    };
 
-    const detailImg = travelData.map((imgSrc) => {
+    const detailImg = travelData.map((imgSrc, idx) => {
         return (
-            <div className="col-xs-4">
+            <div className="col-sm-4 col-md-4 " key={idx}>
                 <img
                     src={imgSrc}
                     alt="travel"
@@ -28,7 +28,7 @@ export default (props) => {
     });
 
     return (
-        <div className="col-xs-12" id=''>
+        <div className="col-sm-12 col-md-12" id=''>
             {detailImg}
         </div>
     )

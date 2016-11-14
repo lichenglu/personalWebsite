@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: sans-serif;
 }
 
@@ -49,18 +50,53 @@ body {
 
     .CLCenteredDiv {
       @include vertical-horizontal-align(absolute, 30%);
+      width: 80%;
     }
 
     .CLPageContent {
       padding-top: 10%;
       padding-left: 10%;
       padding-right: 10%;
-      padding-bottom: 15px;
+      padding-bottom: 12px;
     }
   }
 
-  #CLCharts {
-    position: absolute;
-    bottom: 15%;
+}
+
+#CLFooter {
+  height: 142px;
+  background-color: #29333d;
+  font-family: 'Inconsolata', monospace;
+  color: white;
+
+  h3 {
+    margin-top: 0;
+    padding-top: 15px;
+  }
+
+  .CLFooterIcon {
+    i {
+      cursor: pointer;
+    }
+
+    i:hover {
+      color: #aeafae;
+    }
+  }
+}
+
+@media all and (max-width: 770px) {
+  .CLFullPage {
+    height: 200vh;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .CLFullPage {
+    height: 140vh;
+
+    p {
+      font-size: 7.5vmin;
+    }
   }
 }

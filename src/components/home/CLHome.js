@@ -89,7 +89,7 @@ class CLHome extends Component {
                         </Link>
                     </div>
 
-                    <div className="row">
+                    <div className="container">
                         { this.generateDetailView(idx) }
                     </div>
 

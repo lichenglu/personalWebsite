@@ -28,19 +28,19 @@ export default (props) => {
 
     console.log(Chart.defaults.global.defaultFontColor);
     return(
-        <div className="col-sm-12 text-center" id={CLConstance.styles.ids.charts}>
+        <div className="col-sm-12 col-md-12 text-center" id={CLConstance.styles.ids.charts}>
 
-            <div className="col-sm-4">
+            <div className="col-sm-4 col-md-4">
                 <p>Strengths and Weaknesses</p>
                 <Radar data={chartsData.radar} options={radarOption} />
             </div>
 
-            <div className="col-sm-4">
+            <div className="col-sm-4 col-md-4">
                 <p>StackOverview</p>
                 <Bar data={chartsData.bar} options={chartOption} />
             </div>
 
-            <div className="col-sm-4">
+            <div className="col-sm-4 col-md-4">
                 <p>Number of Projects</p>
                 <Doughnut data={chartsData.doughnut} />
             </div>

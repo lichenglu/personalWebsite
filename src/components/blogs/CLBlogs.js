@@ -3,8 +3,6 @@
  */
 import React, { Component } from 'react';
 
-import CLCharts from '../home/CLCharts';
-
 class CLBlogs extends Component {
     render() {
         return (
