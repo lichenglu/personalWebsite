@@ -2,6 +2,7 @@
  * Created by chengluli on 12/11/2016.
  */
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 import {Navbar, Nav, NavItem, Glyphicon} from 'react-bootstrap';
 import CLConstance from '../utils/Constance';
@@ -29,12 +30,13 @@ class CLHeader extends Component {
     render() {
 
         const placeholders = CLConstance.placeholders;
+        const routes = CLConstance.staticData.routes;
 
         return (
             <Navbar inverse collapseOnSelect fixedTop id={CLConstance.styles.ids.navBar}>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="#">{placeholders.navBarTitle}</a>
+                        <Link to={routes.home}>{placeholders.navBarTitle}</Link>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
