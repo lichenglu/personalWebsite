@@ -9,7 +9,9 @@ import CLPortfolioCell from './CLPortfolioCell';
 export default (props) => {
 
     const portfolios = CLConstance.staticData.portfolios;
-    const cells = portfolios.map((portfolio, idx) => {
+    const numOfCardsPerRow = 2;
+    let sections = [];
+    const cards = portfolios.map((portfolio, idx) => {
         return (
             <CLPortfolioCell
                 description={portfolio.description}
@@ -19,9 +21,37 @@ export default (props) => {
         )
     });
 
+    let tempArr = [];
+    for (var i = 1; i <= cards.length; i++) {
+
+        if(i % numOfCardsPerRow === 0) {
+
+            tempArr.push(
+                <div className={"col-md-" + `${12 / numOfCardsPerRow}` }>
+                    { cards[i - 1] }
+                </div>
+            );
+
+            sections.push(
+                <div className={'col-md-12'}>
+                    {tempArr}
+                </div>
+            );
+
+            tempArr = [];
+
+        }else {
+            tempArr.push(
+                <div className={"col-md-" + `${12/numOfCardsPerRow}` }>
+                    { cards[i - 1] }
+                </div>
+            )
+        }
+    }
+
     return(
-        <div className="col-md-12">
-            {cells}
+        <div>
+            {sections}
         </div>
     );
 }

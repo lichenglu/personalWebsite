@@ -3,6 +3,12 @@ import { withRouter } from 'react-router';
 
 import { RouteTransition } from 'react-router-transition';
 
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+// Needed for onTouchTap
+injectTapEventPlugin();
+
 import CLHeader from './header/CLHeader';
 import CLFooter from './footer/CLFooter';
 
@@ -24,6 +30,7 @@ class App extends Component {
     render() {
 
         return (
+            <MuiThemeProvider muiTheme={getMuiTheme()}>
             <div className="App">
 
                 <CLHeader
@@ -45,6 +52,7 @@ class App extends Component {
                 <CLFooter />
 
             </div>
+            </MuiThemeProvider>
         );
     }
 }
