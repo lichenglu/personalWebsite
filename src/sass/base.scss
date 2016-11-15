@@ -56,29 +56,39 @@ body {
       padding-top: 10%;
       padding-left: 10%;
       padding-right: 10%;
-      padding-bottom: 12px;
+      padding-bottom: 8%;
+    }
+
+    #CLTravel {
+      img {
+        margin: 12px 0;
+      }
     }
   }
 
 }
 
 #CLPortfolio {
-  padding: 60px 0 20px 0; // equal to the hight of navBar
-  min-height: 140vh;
+  padding: 60px 0 0 0; // top equal to the hight of navBar
+  //min-height: 120vh;
   color: white;
   background-color: #a8d4d1;
+  overflow: hidden;
 
   .col-md-12 {
     padding: 0;
   }
 
-  .CLPortfolio-Cell {
-    height: 200px;
-    padding: 0;
-    background: #00a98b no-repeat center center;
-    box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
-    border-radius:5px;
+  .CLPortfolio-Card {
+    
+    i.fa {
+      cursor: pointer;
 
+      &:hover {
+        color: #aeafae
+      }
+    }
+    
     .CLOverlay {
       background:rgba(0,0,0,.75);
       width: 100%;
@@ -87,11 +97,14 @@ body {
       -webkit-transition: opacity .25s ease;
       -moz-transition: opacity .25s ease;
     }
-  }
 
-  .CLPortfolio-Cell:hover {
-    .CLOverlay {
-      opacity:1;
+    &:hover {
+
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+      .CLOverlay {
+        opacity:1;
+      }
     }
   }
 }

@@ -38,30 +38,32 @@ body {
     padding-top: 10%;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 12px; }
+    padding-bottom: 8%; }
+  #CLHome .CLFullPage #CLTravel img {
+    margin: 12px 0; }
 
 #CLPortfolio {
-  padding: 60px 0 20px 0;
-  min-height: 140vh;
+  padding: 60px 0 0 0;
   color: white;
-  background-color: #a8d4d1; }
+  background-color: #a8d4d1;
+  overflow: hidden; }
   #CLPortfolio .col-md-12 {
     padding: 0; }
-  #CLPortfolio .CLPortfolio-Cell {
-    height: 200px;
-    padding: 0;
-    background: #00a98b no-repeat center center;
-    box-shadow: inset 1px 1px 40px 0 rgba(0, 0, 0, 0.45);
-    border-radius: 5px; }
-    #CLPortfolio .CLPortfolio-Cell .CLOverlay {
-      background: rgba(0, 0, 0, 0.75);
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      -webkit-transition: opacity .25s ease;
-      -moz-transition: opacity .25s ease; }
-  #CLPortfolio .CLPortfolio-Cell:hover .CLOverlay {
-    opacity: 1; }
+  #CLPortfolio .CLPortfolio-Card i.fa {
+    cursor: pointer; }
+    #CLPortfolio .CLPortfolio-Card i.fa:hover {
+      color: #aeafae; }
+  #CLPortfolio .CLPortfolio-Card .CLOverlay {
+    background: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: opacity .25s ease;
+    -moz-transition: opacity .25s ease; }
+  #CLPortfolio .CLPortfolio-Card:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
+    #CLPortfolio .CLPortfolio-Card:hover .CLOverlay {
+      opacity: 1; }
 
 #CLFooter {
   height: 142px;

@@ -13,6 +13,7 @@ import ailingual from '../../assets/ailingual.png';
 import codingPal from '../../assets/appIcon.png';
 import alienRescue from '../../assets/alienRescue.png';
 import star from '../../assets/star.png';
+import uhs from '../../assets/uhs.jpeg';
 
 function CLConstance() {
 
@@ -128,10 +129,58 @@ function CLConstance() {
             },
 
             portfolios: [
-                {imgURL: ailingual, name: 'AILingual', description: '123'},
-                {imgURL: star, name: 'STAR', description: '456'},
-                {imgURL: alienRescue, name: 'Alien Rescue', description: '789'},
-                {imgURL: codingPal, name: 'Coding Pals', description: 'rrr'},
+                {
+                    imgURL: ailingual,
+                    name: 'AILingual',
+                    stacks: 'Objective-C & Swift',
+                    link: 'https://itunes.apple.com/us/app/xiao-ban-deng-sui-shi-sui/id1041867310?mt=8',
+                    iconName: 'fa fa-apple fa-4x',
+                    description: 'A voice live streaming app aimed to help Chinese students with' +
+                    ' their applications to universities in the United States. Based on the large voice' +
+                    ' data we have, we have made use of them to have a pipeline that can target users\'' +
+                    ' interests based on machine learning and artificial intelligence.'
+
+                },
+                {
+                    imgURL: star,
+                    name: 'STAR',
+                    stacks: 'Swift',
+                    link: 'https://github.com/lichenglu/STAR_Project',
+                    iconName: 'fa fa-github fa-4x',
+                    description: 'Scholars Tracking Archival Resources (STAR) project focuses on how' +
+                    ' an mobile app on smart phones can improve scholar\'s work efficiency'
+                },
+                {
+                    imgURL: alienRescue,
+                    name: 'Alien Rescue',
+                    stacks: 'React & Blend4Web',
+                    link: 'http://alienrescue.edb.utexas.edu/',
+                    iconName: "fa fa-html5 fa-4x",
+                    description: 'Alien Rescue is an online problem-based 3D immersive learning' +
+                    ' environment for sixth grade science. It combines best practices from educational ' +
+                    'research with innovative technologies to deliver an engaging learning experience.'
+                },
+                {
+                    imgURL: codingPal,
+                    name: 'Coding Pals',
+                    stacks: 'Swift & Objective-C',
+                    link: 'https://github.com/lichenglu/codingPals',
+                    iconName: 'fa fa-github fa-4x',
+                    description: 'CodingPals is a location && interest based app for beginning/intermediate' +
+                    ' level programmers to find friends in common.'
+                },
+                {
+                    isDummy: true
+                },
+                {
+                    imgURL: uhs,
+                    name: 'UHS Website',
+                    stacks: 'HTML & CSS & JavaScript',
+                    link: 'https://healthyhorns.utexas.edu/',
+                    iconName: 'fa fa-html5 fa-4x',
+                    description: 'Maintain and develop the website for University' +
+                    ' Health Services at the University of Texas at Austin as Graduate Research Assistant.'
+                },
             ],
 
             footer: {
@@ -150,6 +199,7 @@ function CLConstance() {
                 navBar: 'CLNavBar',
                 homePage: 'CLHome',
                 charts:'CLCharts',
+                travelView: 'CLTravel',
                 footer:'CLFooter',
                 portfolio: 'CLPortfolio',
             },
@@ -160,7 +210,7 @@ function CLConstance() {
                 overlay: 'CLOverlay',
                 centeredDiv: 'CLCenteredDiv',
                 pageContentDiv: 'CLPageContent',
-                portfolioCell: 'CLPortfolio-Cell',
+                portfolioCard: 'CLPortfolio-Card',
                 footerIcon: 'CLFooterIcon',
             },
 

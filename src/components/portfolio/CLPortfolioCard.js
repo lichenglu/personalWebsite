@@ -8,7 +8,13 @@ import FlatButton from 'material-ui/FlatButton';
 
 import CLConstance from '../utils/Constance';
 
-export default class CLPortfolioCell extends Component {
+export default class CLPortfolioCard extends Component {
+
+    didClickIcon() {
+        const link = this.props.link;
+        const win = window.open(link, '_blank');
+        win.focus();
+    }
 
     render() {
         const classes = CLConstance.styles.classes;
@@ -23,22 +29,18 @@ export default class CLPortfolioCell extends Component {
         };
 
         return (
-            <Card containerStyle={cardStyle}>
+            <Card containerStyle={cardStyle} className={CLConstance.styles.classes.portfolioCard}>
                 <CardMedia
                 >
                     <img src={this.props.imgURL} style={cardImgStyle} />
                 </CardMedia>
-                <CardTitle title="Card title" subtitle="Card subtitle" />
+                <CardTitle title={this.props.name} subtitle={'Built with ' + this.props.stacks} />
                 <CardText
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                    Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-                    Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                    {this.props.description}
                 </CardText>
                 <CardActions>
-                    <FlatButton label="Action1" />
-                    <FlatButton label="Action2" />
+                    <i className={this.props.iconName} onClick={this.didClickIcon.bind(this)}/>
                 </CardActions>
             </Card>
         );

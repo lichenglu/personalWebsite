@@ -28,7 +28,7 @@ export default (props) => {
     });
 
     return (
-        <div className="col-sm-12 col-md-12" id=''>
+        <div className="col-sm-12 col-md-12" id={CLConstance.styles.ids.travelView}>
             {detailImg}
         </div>
     )
