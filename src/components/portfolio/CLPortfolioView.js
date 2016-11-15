@@ -42,7 +42,7 @@ export default (props) => {
     for (var i = 1; i <= cards.length; i++) {
 
         tempArr.push(
-            <div className={"col-md-" + `${12 / numOfCardsPerRow}` } key={i}>
+            <div className={"col-md-" + `${12 / numOfCardsPerRow}`} key={i} >
                 { cards[i - 1] }
             </div>
         );
@@ -50,7 +50,7 @@ export default (props) => {
         if(i % numOfCardsPerRow === 0) {
 
             sections.push(
-                <div className={'col-md-12'}>
+                <div className={'col-md-12'} key={i + 'abc'}>
                     {tempArr}
                 </div>
             );
@@ -60,7 +60,7 @@ export default (props) => {
         }
     }
     sections.push(
-        <div className={'col-md-12'}>
+        <div className={'col-md-12'} key={tempArr.length + 'abcd'}>
             {tempArr}
         </div>
     );

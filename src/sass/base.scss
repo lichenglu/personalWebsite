@@ -19,7 +19,9 @@ body {
 
 
 .CLFullPage {
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: no-repeat center center;
 }
 
@@ -60,9 +62,14 @@ body {
     }
 
     #CLTravel {
+      flex: 1;
       img {
         margin: 12px 0;
       }
+    }
+
+    #CLCharts {
+      flex: 1;
     }
   }
 
@@ -80,7 +87,7 @@ body {
   }
 
   .CLPortfolio-Card {
-    
+
     i.fa {
       cursor: pointer;
 
@@ -88,7 +95,7 @@ body {
         color: #aeafae
       }
     }
-    
+
     .CLOverlay {
       background:rgba(0,0,0,.75);
       width: 100%;
@@ -99,8 +106,6 @@ body {
     }
 
     &:hover {
-
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
       .CLOverlay {
         opacity:1;
@@ -131,17 +136,23 @@ body {
 }
 
 @media all and (max-width: 770px) {
-  .CLFullPage {
-    height: 200vh;
-  }
+
 }
 
 @media all and (max-width: 500px) {
-  .CLFullPage {
-    height: 140vh;
+  #CLHome{
 
-    p {
-      font-size: 7.5vmin;
+    .CLFullPage {
+      p {
+        font-size: 5vmin;
+      }
+
+      #CLTravel {
+        .CLCircular-Square {
+          border-radius: 0;
+          width: 100%;
+        }
+      }
     }
   }
 }

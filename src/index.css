@@ -5,7 +5,9 @@ body {
   font-family: 'Inconsolata', monospace; }
 
 .CLFullPage {
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: no-repeat center center; }
 
 .CLHidden {
@@ -39,8 +41,12 @@ body {
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 8%; }
-  #CLHome .CLFullPage #CLTravel img {
-    margin: 12px 0; }
+  #CLHome .CLFullPage #CLTravel {
+    flex: 1; }
+    #CLHome .CLFullPage #CLTravel img {
+      margin: 12px 0; }
+  #CLHome .CLFullPage #CLCharts {
+    flex: 1; }
 
 #CLPortfolio {
   padding: 60px 0 0 0;
@@ -60,10 +66,8 @@ body {
     opacity: 0;
     -webkit-transition: opacity .25s ease;
     -moz-transition: opacity .25s ease; }
-  #CLPortfolio .CLPortfolio-Card:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
-    #CLPortfolio .CLPortfolio-Card:hover .CLOverlay {
-      opacity: 1; }
+  #CLPortfolio .CLPortfolio-Card:hover .CLOverlay {
+    opacity: 1; }
 
 #CLFooter {
   height: 142px;
@@ -77,12 +81,9 @@ body {
   #CLFooter .CLFooterIcon i:hover {
     color: #aeafae; }
 
-@media all and (max-width: 770px) {
-  .CLFullPage {
-    height: 200vh; } }
-
 @media all and (max-width: 500px) {
-  .CLFullPage {
-    height: 140vh; }
-    .CLFullPage p {
-      font-size: 7.5vmin; } }
+  #CLHome .CLFullPage p {
+    font-size: 5vmin; }
+  #CLHome .CLFullPage #CLTravel .CLCircular-Square {
+    border-radius: 0;
+    width: 100%; } }
