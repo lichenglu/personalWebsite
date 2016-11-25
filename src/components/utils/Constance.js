@@ -21,7 +21,8 @@ function CLConstance() {
 
         home: '/',
         blogs: 'blogs',
-        portfolio: 'portfolio'
+        portfolio: 'portfolio',
+        googleSearch: 'googleSearch',
 
     };
 

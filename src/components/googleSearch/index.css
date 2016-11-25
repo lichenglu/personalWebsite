@@ -1,0 +1,14 @@
+body {
+  color: white;
+  overflow-x: hidden; }
+
+#AMRoot h1 {
+  padding: 40px 12px 20px 12px; }
+
+#AMRoot .AMNoMargin {
+  margin: 0; }
+
+#AMRoot #AMMapView #AMMapContainer {
+  border: solid ghostwhite 1px;
+  border-radius: 5px;
+  padding: 12px; }
